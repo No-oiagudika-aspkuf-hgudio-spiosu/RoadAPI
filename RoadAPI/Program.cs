@@ -16,7 +16,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddDbContext<RoadAndOtherApiContext>(option =>
 {
-    option.UseSqlServer(builder.Configuration.GetConnectionString("Conn"));
+    option.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
 });
 
 builder.Services.AddScoped<INewsRepository, NewsRepository>();
